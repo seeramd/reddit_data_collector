@@ -11,10 +11,10 @@ The method "history" nicely prints out the recent_history dict, which, as mentio
 
 Finally, this class is utilised in a somewhat underwhelming way. The script will ask for two usernames, and will use the inputs to create two user instances. It will then compare each of their sets of recent subreddits, and count what is shared. The number of shared subreddits is printed as the "Shared activity score"
 
-In terms of exception handling, if the post or comment karma variables draw up a NoneType and cause an AttributeError, which indicates the user doesn't exist, it will print an message stating as such. The active_subs set and recent_history dict are allowed to continue with a NoneType  and be empty because an existing user may simply have no comments or posts. A user will always have at least 1 post karma and 0 comment karma.
+In terms of exception handling, if the post or comment karma variables draw up a NoneType and cause an AttributeError, which indicates the user doesn't exist, it will print an message stating as such. The active_subs set and recent_history dict are allowed to continue with a NoneType  and be empty because an existing user may simply have no comments or posts. An existing user will always have post and comment karma.
 
 ## known issues ##
-* For some existing reddit users, nothing will be scraped, as if the user doesn't exist, and will cause an AttributeError. The user most certainly does exist; you can go to their overview page in your browser and see their activity. I have no idea why this happens for some users and not most others. Is it something with requests and reddit?
+* For some existing reddit users, nothing will be scraped, as if the user doesn't exist, and will cause the karma AttributeError. The user most certainly does exist; you can go to their overview page in your browser and see their activity, but the script nonetheless draws up blank. I have no idea why this happens for some users and not most others. Is it something with requests and reddit?
 
 * Sometimes, the redditor's username (u/username) will appear in the set and/or dict of subreddits. Not sure why this happens either
 
