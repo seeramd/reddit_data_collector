@@ -9,7 +9,7 @@ The private method "\__soupkitchen" scrapes and parses via the fakeuser agent, r
 
 The method "history" nicely prints out karma numbers and the recent_history dict, which, as mentioned earlier, counts the number of posts and comments in each subreddit they've recently been active in.
 
-Finally, the script user will choose to either view one redditor or compare two. When viewing one, it will create an instance using the give username will call the history method to print the info. When comparing two users, it will ask for two usernames and call the history method on both. It will also compare their subreddit sets, give the number of common subreddits, and print them if there are any.
+Finally, the script user will choose to either view one redditor or compare two. When viewing one, it will create an instance using the given username will call the history method to print the info. When comparing two users, it will ask for two usernames and call the history method on both. It will also compare their recent_history keys, give the number of common subreddits, and print them if there are any.
 
 In terms of exception handling, if the post or comment karma variables draw up a NoneType and cause an AttributeError, which indicates the user doesn't exist, it will print an message stating as such. It will then sys.exit() on '\n' input. An existing user should always have post and comment karma. It's okay if nothing goes in the dict, as an existing reddit user could just never comment or post.
 
